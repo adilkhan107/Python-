@@ -1,47 +1,46 @@
-# create a class
-class collage :
-    student = 'Btech '
-    year = "2025"
-    course = "CSE"
-Adil  = collage()  # create an object of class
-dev   =    collage()    
-print(dev)
-print(dev.student, dev.year, dev.course) # call the class variable using object 
+"""
+Object-Oriented Programming (OOP) Notes
 
-print(Adil.student, Adil.year, Adil.course) 
+- A class is a blueprint for creating objects.
+- An object is an instance of a class.
+- __init__ is the constructor; it initializes an object.
+- self refers to the current object.
+- Instance attributes belong to a particular object.
+- Class attributes are shared by objects of the class.
+- Methods are functions defined inside a class.
+"""
 
 
+class College:
+    # Class attribute: shared by all College objects
+    college_name = "Mind Power University"
 
-# constructor in python
-class collage:
-    def __init__(self , student , year , course ):
+    def __init__(self, student, year, course):
+        # Instance attributes: each object has its own values
         self.student = student
         self.year = year
         self.course = course
 
-stud1 = collage("adil","2024","BBA")   # create an object of class
-stud2 = collage("dev","2023" ,"EEC")   # create an object of class
-stud3 = collage("amit","2025","CSE")   # create an object of class
-print(stud1.student)
-print(stud2.year)
-print(stud3.course)
- # call the class variable using object 
+    def display_details(self):
+        """Display this student's details."""
+        print(f"Student: {self.student}")
+        print(f"Year: {self.year}")
+        print(f"Course: {self.course}")
 
-'''
 
- Attribute 
-there are two types of attributes in python
-1. Instance attribute   
-2. Class attribute'
+# Create objects from the College class
+student1 = College("Adil", "2024", "BBA")
+student2 = College("Dev", "2023", "ECE")
+student3 = College("Amit", "2025", "CSE")
 
-'''
+# Access the class attribute
+print("College:", College.college_name)
 
-class collage:
-    collage_name  = "Mind power University"  # class attribute
-    def __init__(self , student , year , course ) :
-        self.student = student  # instance attribute
-        self.year = year      # instance attribute
-        self.course = course  # instance attribute  
-student1 = collage("adil","2024","BBA")   # create an object of class        
-print(collage.collage_name)  # call the class attribute using class name    
-print(student1.student, student1.year, student1.course)  # call the instance attribute using object name
+# Call a method on each object
+student1.display_details()
+print()
+
+student2.display_details()
+print()
+
+student3.display_details()
