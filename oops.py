@@ -35,3 +35,13 @@ there are two types of attributes in python
 2. Class attribute'
 
 '''
+
+class collage:
+    collage_name  = "Mind power University"  # class attribute
+    def __init__(self , student , year , course ) :
+        self.student = student  # instance attribute
+        self.year = year      # instance attribute
+        self.course = course  # instance attribute  
+student1 = collage("adil","2024","BBA")   # create an object of class        
+print(collage.collage_name)  # call the class attribute using class name    
+print(student1.student, student1.year, student1.course)  # call the instance attribute using object name
